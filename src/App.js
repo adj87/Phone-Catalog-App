@@ -10,9 +10,15 @@ class App extends Component {
   render() {
     const phones = db.phones
     return (
-      <section className="section">
-        <PhoneListContainer phones={phones} />
-      </section>
+      <div className="section">
+        <p class="title is-1 has-text-centered">Phone catalog app</p>
+        <p class="subtitle is-3 has-text-centered">
+          The best catalog phone ever
+        </p>
+        <section className="section">
+          <PhoneListContainer phones={phones} />
+        </section>
+      </div>
     )
   }
 }
