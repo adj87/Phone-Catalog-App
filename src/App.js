@@ -13,7 +13,7 @@ class App extends Component {
       <div className="section">
         <p class="title is-1 has-text-centered">Phone catalog app</p>
         <p class="subtitle is-3 has-text-centered">
-          The best catalog phone ever
+          The best phone catalog ever
         </p>
         <section className="section">
           <PhoneListContainer phones={phones} />

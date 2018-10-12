@@ -1,8 +1,19 @@
 .modal-content img,
 .card-image img {
   display: block !important;
-  max-width: 50% !important;
+  max-width: 60% !important;
   margin-left: auto;
   margin-right: auto;
   /* min-width: 200px !important; */
+}
+.modal-card-body {
+  background-color: transparent !important;
+}
+.modal-card-body > p,
+div {
+  color: white;
+}
+
+.tags {
+  justify-content: space-around !important;
 }

@@ -16,20 +16,13 @@ const PhoneDetailComponent = ({ phoneSelected, setPhoneSelected }) => {
           <p className="image is-4by3">
             <img src={srcImage} alt="" />
           </p>
-          <section class="modal-card-body">
+          <section class="modal-card-body has-text-centered">
             <p class="title is-4">{name}</p>
-            <p>
-              <span class="tag is-link">Price {price}</span>
-              <span class="tag is-info">
-                Colour
-                {color}
-              </span>
-              <span class="tag is-success">Success</span>
-            </p>
-            <div class="content">
-              {description}
-              <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+            <div class="tags">
+              <span class="tag">Price: {price}</span>
+              <span class="tag">Color: {color}</span>
             </div>
+            <div class="content">{description}</div>
           </section>
         </div>
         <button
