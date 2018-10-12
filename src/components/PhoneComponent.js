@@ -3,12 +3,11 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 import { setPhoneSelected } from '../actions'
-
-const url = 'http://localhost:3000/images/'
+import { host } from '../config'
 
 const PhoneComponent = ({ phone, setPhoneSelected }) => {
   const { id, name, price, color, description } = phone
-  const srcImage = url + phone['product-image']
+  const srcImage = host + '/images/' + phone['product-image']
 
   return (
     <div
@@ -28,7 +27,6 @@ const PhoneComponent = ({ phone, setPhoneSelected }) => {
           <div className="media-left" />
           <div className="media-content">
             <p className="title is-4">{name}</p>
-            <p className="subtitle is-6">@johnsmith</p>
           </div>
         </div>
       </div>

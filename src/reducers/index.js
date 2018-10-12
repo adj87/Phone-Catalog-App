@@ -1,4 +1,4 @@
-let initialState = { phone_selected: null, phones: [] }
+let initialState = { phoneSelected: null, phones: [] }
 
 export default (state = initialState, { type, payload }) => {
   switch (type) {
@@ -6,7 +6,7 @@ export default (state = initialState, { type, payload }) => {
       return { ...state, phones: payload }
       break
     case 'SET_PHONE_SELECTED':
-      return { ...state, phone_selected: payload }
+      return { ...state, phoneSelected: payload }
     default:
       return state
       break
