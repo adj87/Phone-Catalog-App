@@ -1,13 +1,23 @@
 import React from 'react'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
+
+import { setPhoneSelectedStatus } from '../actions'
 
 const url = 'http://localhost:3000/images/'
 
-const PhoneComponent = ({ phone }) => {
+const PhoneComponent = ({ phone, setPhoneSelectedStatus }) => {
   const { id, name, price, color, description } = phone
   const srcImage = url + phone['product-image']
 
   return (
-    <div className="card column">
+    <div
+      className="card column"
+      onClick={() => {
+        console.log('yea')
+        setPhoneSelectedStatus()
+      }}
+    >
       <div className="card-image">
         <figure className="image is-4by3">
           <img src={srcImage} alt={name} />
@@ -26,4 +36,11 @@ const PhoneComponent = ({ phone }) => {
   )
 }
 
-export { PhoneComponent }
+const mapDispatchToProps = dispatch => ({
+  setPhoneSelectedStatus: bindActionCreators(setPhoneSelectedStatus, dispatch)
+})
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(PhoneComponent)

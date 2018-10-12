@@ -3,6 +3,6 @@ export const fetchPhones = phones => ({
   payload: phones
 })
 
-export const setPhoneSelectStatus = status => ({
+export const setPhoneSelectedStatus = status => ({
   type: 'PHONE_SELECTED_STATUS'
 })

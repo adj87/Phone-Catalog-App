@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import './App.css'
-import bulma from 'bulma/css/bulma.min.css'
+import 'bulma/css/bulma.min.css'
 
 import { PhoneListContainer } from './components/PhoneListContainer'
 import db from './delete.json'

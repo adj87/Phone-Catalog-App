@@ -1,6 +1,7 @@
 import React from 'react'
 
-import { PhoneComponent } from './PhoneComponent'
+import PhoneComponent from './PhoneComponent'
+import PhoneDetailComponent from './PhoneDetailComponent'
 
 export const PhoneListContainer = ({ phones }) => {
   return (
@@ -10,6 +11,7 @@ export const PhoneListContainer = ({ phones }) => {
           <PhoneComponent phone={phone} key={phone.id} />
         ))}
       </div>
+      <PhoneDetailComponent />
     </div>
   )
 }
