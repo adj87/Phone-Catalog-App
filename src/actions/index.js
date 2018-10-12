@@ -4,6 +4,6 @@ export const fetchPhones = phones => ({
 })
 
 export const setPhoneSelected = phone => ({
-  type: 'PHONE_SELECTED',
+  type: 'SET_PHONE_SELECTED',
   payload: phone
 })

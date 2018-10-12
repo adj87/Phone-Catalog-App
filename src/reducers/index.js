@@ -5,7 +5,7 @@ export default (state = initialState, { type, payload }) => {
     case 'FETCH_API':
       return { ...state, phones: payload }
       break
-    case 'PHONE_SELECTED':
+    case 'SET_PHONE_SELECTED':
       return { ...state, phone_selected: payload }
     default:
       return state
