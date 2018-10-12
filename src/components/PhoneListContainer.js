@@ -8,7 +8,7 @@ export const PhoneListContainer = ({ phones }) => {
           const srcImage =
             'http://localhost:3000/images/' + phone['product-image']
           return (
-            <div className="card column">
+            <div className="card column" key={phone.id}>
               <div className="card-image">
                 <figure className="image is-4by3">
                   <img src={srcImage} alt={phone.name} />
