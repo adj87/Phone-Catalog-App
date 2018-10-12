@@ -2,9 +2,9 @@ import React from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { setPhoneSelectedStatus } from '../actions'
+import { setPhoneSelected } from '../actions'
 
-const PhoneDetailComponent = ({ phone_selected, setPhoneSelectedStatus }) => {
+const PhoneDetailComponent = ({ phone_selected, setPhoneSelected }) => {
   const clase = phone_selected ? 'modal is-active' : 'modal'
   return (
     <div className={clase}>
@@ -13,14 +13,14 @@ const PhoneDetailComponent = ({ phone_selected, setPhoneSelectedStatus }) => {
       <button
         className="modal-close is-large"
         aria-label="close"
-        onClick={() => setPhoneSelectedStatus()}
+        onClick={() => setPhoneSelected(null)}
       />
     </div>
   )
 }
 
 const mapDispatchToProps = dispatch => ({
-  setPhoneSelectedStatus: bindActionCreators(setPhoneSelectedStatus, dispatch)
+  setPhoneSelected: bindActionCreators(setPhoneSelected, dispatch)
 })
 const mapStateToProps = state => ({
   phone_selected: state.phone_selected

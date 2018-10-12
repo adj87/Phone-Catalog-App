@@ -2,11 +2,11 @@ import React from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { setPhoneSelectedStatus } from '../actions'
+import { setPhoneSelected } from '../actions'
 
 const url = 'http://localhost:3000/images/'
 
-const PhoneComponent = ({ phone, setPhoneSelectedStatus }) => {
+const PhoneComponent = ({ phone, setPhoneSelected }) => {
   const { id, name, price, color, description } = phone
   const srcImage = url + phone['product-image']
 
@@ -15,7 +15,7 @@ const PhoneComponent = ({ phone, setPhoneSelectedStatus }) => {
       className="card column"
       onClick={() => {
         console.log('yea')
-        setPhoneSelectedStatus()
+        setPhoneSelected(phone)
       }}
     >
       <div className="card-image">
@@ -37,7 +37,7 @@ const PhoneComponent = ({ phone, setPhoneSelectedStatus }) => {
 }
 
 const mapDispatchToProps = dispatch => ({
-  setPhoneSelectedStatus: bindActionCreators(setPhoneSelectedStatus, dispatch)
+  setPhoneSelected: bindActionCreators(setPhoneSelected, dispatch)
 })
 
 export default connect(
