@@ -13,7 +13,6 @@ const PhoneComponent = ({ phone, setPhoneSelected }) => {
     <div
       className="card column"
       onClick={() => {
-        console.log('yea')
         setPhoneSelected(phone)
       }}
     >
@@ -26,7 +25,7 @@ const PhoneComponent = ({ phone, setPhoneSelected }) => {
         <div className="media">
           <div className="media-left" />
           <div className="media-content">
-            <p className="title is-4">{name}</p>
+            <p className="title is-4 has-text-centered">{name}</p>
           </div>
         </div>
       </div>
