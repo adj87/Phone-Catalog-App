@@ -11,8 +11,8 @@ class App extends Component {
     const phones = db.phones
     return (
       <div className="section">
-        <p class="title is-1 has-text-centered">Phone catalog app</p>
-        <p class="subtitle is-3 has-text-centered">
+        <p className="title is-1 has-text-centered">Phone catalog app</p>
+        <p className="subtitle is-3 has-text-centered">
           The best phone catalog ever
         </p>
         <section className="section">

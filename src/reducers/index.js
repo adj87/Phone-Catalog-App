@@ -1,14 +1,8 @@
-let initialState = { phoneSelected: null, phones: [] }
+import { combineReducers } from 'redux'
+import { dataReducer } from './dataReducer'
+import { phoneReducer } from './phoneReducer'
 
-export default (state = initialState, { type, payload }) => {
-  switch (type) {
-    case 'FETCH_API':
-      return { ...state, phones: payload }
-      break
-    case 'SET_PHONE_SELECTED':
-      return { ...state, phoneSelected: payload }
-    default:
-      return state
-      break
-  }
-}
+export default combineReducers({
+  data: dataReducer,
+  phone: phoneReducer
+})
