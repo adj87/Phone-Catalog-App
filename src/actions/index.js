@@ -1,8 +1,7 @@
 import getDataApi from '../services'
 
-export const getData = phones => ({
-  type: 'FETCHING_DATA',
-  payload: phones
+export const getData = () => ({
+  type: 'FETCHING_DATA'
 })
 
 export const getDataSuccess = phones => ({
@@ -10,9 +9,8 @@ export const getDataSuccess = phones => ({
   payload: phones
 })
 
-export const getDataFailure = phones => ({
-  type: 'FETCHING_DATA_FAILURE',
-  phones
+export const getDataFailure = () => ({
+  type: 'FETCHING_DATA_FAILURE'
 })
 
 export const setPhoneSelected = phone => ({
@@ -21,10 +19,10 @@ export const setPhoneSelected = phone => ({
 })
 
 export const fetchData = () => dispatch => {
-  return dispatch => {
-    dispatch(getData())
-    getDataApi
-      .then(phones => dispatch(getDataSuccess(phones)))
-      .catch(err => console.log(err))
-  }
+  dispatch(getData())
+  getDataApi()
+    .then(phones => {
+      dispatch(getDataSuccess(phones))
+    })
+    .catch(getDataFailure())
 }

@@ -42,7 +42,7 @@ const mapDispatchToProps = dispatch => ({
 })
 
 const mapStateToProps = state => ({
-  phoneSelected: state.phoneSelected
+  phoneSelected: state.phoneSelected.phoneSelected
 })
 
 export default connect(

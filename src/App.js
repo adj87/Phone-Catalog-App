@@ -1,11 +1,8 @@
 import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import './App.css'
-import 'bulma/css/bulma.min.css'
 
 import { PhoneListContainer } from './components/PhoneListContainer'
-//import db from './delete.json'
 import { fetchData } from './actions'
 
 class App extends Component {
@@ -13,7 +10,7 @@ class App extends Component {
     this.props.fetchData()
   }
   render() {
-    console.log(this.props)
+    const { phones } = this.props
     return (
       <div className="section">
         <p className="title is-1 has-text-centered">Phone catalog app</p>
@@ -21,7 +18,7 @@ class App extends Component {
           The best phone catalog ever
         </p>
         <section className="section">
-          {/* <PhoneListContainer phones={phones} /> */}
+          <PhoneListContainer phones={phones} />
         </section>
       </div>
     )
@@ -29,7 +26,8 @@ class App extends Component {
 }
 
 const mapStateToProps = state => ({
-  loaded: state.data.isFetching
+  loaded: state.data.isFetching,
+  phones: state.data.phones
 })
 
 const mapDispatchToProps = dispatch => ({

@@ -4,7 +4,7 @@
       "id": 1,
       "name": "iPhone 8",
       "description": "Description for iPhone 8",
-      "product-image": "iphone-8.jpg",
+      "product-image": "iphone8.jpg",
       "color": "white",
       "price": "700"
     },
@@ -20,7 +20,7 @@
       "id": 3,
       "name": "Xiaomi MI5",
       "description": "Description for Xiami MI5",
-      "product-image": "xiaomi-mi-5.png",
+      "product-image": "xiaomi-mi-5.jpg",
       "color": "black",
       "price": "400"
     }
