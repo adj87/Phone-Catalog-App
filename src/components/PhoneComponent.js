@@ -1,12 +1,13 @@
 import React from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 
 import { setPhoneSelected } from '../actions'
 import { host } from '../config'
 
 const PhoneComponent = ({ phone, setPhoneSelected }) => {
-  const { id, name, price, color, description } = phone
+  const { name } = phone
   const srcImage = host + '/images/' + phone['product-image']
 
   return (
@@ -31,6 +32,11 @@ const PhoneComponent = ({ phone, setPhoneSelected }) => {
       </div>
     </div>
   )
+}
+
+PhoneComponent.propTypes = {
+  phoneSelected: PropTypes.object,
+  setPhoneSelected: PropTypes.func.isRequired
 }
 
 const mapDispatchToProps = dispatch => ({
