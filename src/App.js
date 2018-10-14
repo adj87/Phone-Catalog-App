@@ -3,6 +3,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 import { PhoneListContainer } from './components/PhoneListContainer'
+import { SpinnerComponent } from './components/SpinnerComponent'
 import { fetchData } from './actions'
 
 class App extends Component {
@@ -10,7 +11,7 @@ class App extends Component {
     this.props.fetchData()
   }
   render() {
-    const { phones } = this.props
+    const { phones, loading } = this.props
     return (
       <div className="section">
         <p className="title is-1 has-text-centered">Phone catalog app</p>
@@ -20,13 +21,14 @@ class App extends Component {
         <section className="section">
           <PhoneListContainer phones={phones} />
         </section>
+        <SpinnerComponent loading={loading} />
       </div>
     )
   }
 }
 
 const mapStateToProps = state => ({
-  loaded: state.data.isFetching,
+  loading: state.data.isFetching,
   phones: state.data.phones
 })
 

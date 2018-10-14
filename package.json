@@ -6,7 +6,9 @@
     "bulma": "^0.7.1",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "react-scripts": "2.0.4"
+    "react-scripts": "2.0.4",
+    "react-spinners": "^0.4.5",
+    "redux-devtools-extension": "^2.13.5"
   },
   "scripts": {
     "startdb": "json-server --watch db.json",
