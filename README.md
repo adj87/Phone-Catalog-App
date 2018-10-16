@@ -4,8 +4,8 @@ A very simple product catalog app using React,Redux and Bulma
 
 ## Instalation
 
-First of all, make sure you are on the branch **master**, if not switch to it
-To install the app, install all the dependencies by running the following commands:
+First of all, make sure you are on the branch **master**, if not switch to it.
+Install all the dependencies by running the following commands:
 
 ```sh
 $ cd Phone-Catalog-App
